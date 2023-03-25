@@ -10,7 +10,7 @@ const cors = require('cors');
 // importing routes
 const indexRouter = require('./routes/index.js');
 const postsRouter = require('./routes/posts.js');
-const { dbConnection } = require('./config/db-connection.js');
+const dbConnection = require('./config/db-connection.js');
 // set port number
 dotenv.config();
 const app = express();
@@ -23,7 +23,7 @@ app.use(cors());
 
 // set routes
 app.use('/', indexRouter);
-app.use('/posts', postsRouter);
+app.use('/blogs', postsRouter);
 
 // connect to db
 mongoose.set('strictQuery', true);
