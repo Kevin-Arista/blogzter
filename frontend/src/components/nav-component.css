@@ -1,0 +1,16 @@
+.App{
+    background-color: #f4d35e;
+    color: #083d77;
+}
+
+ul{
+    padding: 30px;
+    margin: -5px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+li{
+    display: inline;
+    padding: 30px 100px;
+}
