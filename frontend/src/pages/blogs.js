@@ -5,7 +5,7 @@ import axios from 'axios';
 
 function Blogs(props){
     return(
-        <div className = "BlogPage">  
+        <div className = "BlogPage">
             <BlogComponent></BlogComponent>
         </div>
     );
