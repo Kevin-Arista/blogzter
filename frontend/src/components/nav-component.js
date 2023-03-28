@@ -1,6 +1,6 @@
 import React from "react";
 import './nav-component.css';
-import { BrowserRouter, Route, Link} from "react-router-dom"
+import {Link} from "react-router-dom"
 
 function NavComponent(props){
     return(
@@ -10,10 +10,13 @@ function NavComponent(props){
                     <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <Link to="/blogs">Blogs</Link>
+                    <Link to="/blogs">Blogz</Link>
                 </li>
                 <li>
-                    <Link to="/forms">Forms</Link>
+                    <Link to="/forms">Form</Link>
+                </li>
+                <li>
+                    <Link to="/about">About</Link>
                 </li>
             </ul>
         </div>

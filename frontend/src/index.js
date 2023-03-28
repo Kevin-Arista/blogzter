@@ -6,6 +6,7 @@ import App from './App';
 import Blogs from './pages/blogs';
 import Forms from './pages/forms';
 import Home from './pages/home';
+import About from './pages/about'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +16,7 @@ root.render(
                 <Route index element={<Home/>} />
                 <Route path="blogs" element={<Blogs />} />
                 <Route path="forms" element={<Forms />} />
+                <Route path="about" element={<About/>}/>
             </Route>
             
         </Routes>

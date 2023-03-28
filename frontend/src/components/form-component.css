@@ -1,0 +1,26 @@
+.BlogForm{
+    background-color: white;
+    color: black;
+    border-left: solid #f4d35e 10px;
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+input{
+    width: 300px;
+    height: 40px;
+}
+
+textarea{
+    width: 300px;
+    height: 300px;
+}
+
+#button{
+    all: unset;
+    cursor: pointer;
+    background-color: #f4d35e;
+    color: black;
+    margin: 20px;
+    padding: 20px; 
+}

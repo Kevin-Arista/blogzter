@@ -1,12 +1,12 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavComponent from '../components/nav-component';
 import BlogForm from '../components/form-component';
-
 
 function Forms(props){
     return(
-        <BlogForm></BlogForm>
+        <div>
+            <h1> What's on your mind? </h1>
+            <BlogForm></BlogForm>
+        </div>
     );
 }
 

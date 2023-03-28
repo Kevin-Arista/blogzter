@@ -1,8 +1,3 @@
-.App{
-    background-color: #f4d35e;
-    color: #083d77;
-}
-
 ul{
     padding: 30px;
     margin: -5px;
@@ -17,7 +12,8 @@ li{
 
 a{
     text-decoration: none;
+    color: black;
 }
 
-a:visited {color:white;} /* Visited link    */
-a:hover {color:rgb(209, 209, 209);}   /* Mouse over link */
+a:visited {color:black;} /* Visited link    */
+a:hover {color:rgb(117, 117, 117);}   /* Mouse over link */

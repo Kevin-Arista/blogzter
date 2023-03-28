@@ -17,10 +17,10 @@ function BlogComponent(props){
 
       return(
         <div className="BlogComponent">
-            {blogList?.map(blog => 
+            {blogList?.reverse().map(blog => 
             <div className="card" key={blog._id}>
               <h2>{blog.title}</h2>
-              <h5>{blog.author}</h5>
+              <h5>by {blog.author}</h5>
               <p>{blog.content}</p>
             </div>
             )}

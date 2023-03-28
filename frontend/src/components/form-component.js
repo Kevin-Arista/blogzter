@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import "./form-component.css";
 
 function BlogForm(props){
     
@@ -14,6 +15,12 @@ function BlogForm(props){
         axios.post("http://localhost:4000/blogs/post", formData).then((res) => {
             console.log(res.status, res.data);
         });
+        setFormData({
+            title: "",
+            author: "",
+            content: ""
+        })
+        alert("Your blog has been submitted, check it out on the Blogs page!");
     }
 
     return(
@@ -21,27 +28,16 @@ function BlogForm(props){
         <div className="BlogForm">
             
             <form onSubmit={handleSubmit}>
-                <h1> What's on your mind? </h1>
-
-                <label htmlFor="title">Title</label>
-                <br/>
+                <h3>Title</h3>
                 <input onChange={(e)=> setFormData({...formData, title: e.target.value})} value={formData.title} type="text" name="title" id="title" />
                 <br/>
-                <br/>
-                <br/>
-                <label htmlFor="author">Author</label>
-                <br/>
+                <h3>Author</h3>
                 <input onChange={(e)=> setFormData({...formData, author: e.target.value})} value={formData.author} type="text" name="author" id="author" />
                 <br/>
-                <br/>
-                <br/>
-                <label htmlFor="content">Content</label>
-                <br/>
+                <h3>Content</h3>
                 <textarea onChange={(e)=> setFormData({...formData, content: e.target.value})} value={formData.content} name="content" id="content"></textarea>
                 <br/>
-                <br/>
-                <br/>
-                <input type="submit" value="Submit" />
+                <input id="button" type="submit" value="Submit" />
             </form>    
         </div>
     );
