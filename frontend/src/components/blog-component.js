@@ -5,14 +5,12 @@ import './blog-component.css'
 function BlogComponent(props){
     const api = axios.create({
         baseURL: `http://localhost:4000`
-        // baseURL: process.env.baseURL
       });
     
       let [blogList, setBlogList] = useState();
       
       api.get('/blogs').then(res =>{
         setBlogList(res.data)
-        console.log(process.env.URL)
       });
 
       return(
