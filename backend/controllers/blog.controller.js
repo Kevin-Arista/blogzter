@@ -15,7 +15,22 @@ const blog_list_get = (req, res) => {
 
 // Handle to create a blog on POST.
 const blog_create_post = (req, res) => {
-    res.send("Form to make blog");
+    const incomingData = req.body;
+    const newBlog = new BlogModel(incomingData);
+
+    newBlog.save((err, doc) => {
+        if (err) {
+            res.status(500).send({
+                err: err,
+                message: 'Error Occured. Could not create blog. Sorry.'
+            });
+        };
+
+        res.status(200).send({
+            message: 'Blog successfully created.',
+            document: doc
+        });
+    });
 };
 
 module.exports = { blog_list_get ,blog_create_post };
