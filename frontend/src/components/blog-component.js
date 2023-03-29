@@ -4,7 +4,7 @@ import './blog-component.css'
 
 function BlogComponent(props){
     const api = axios.create({
-        baseURL: `http://localhost:4000`
+        baseURL: `https://blogzter.onrender.com`
       });
     
       let [blogList, setBlogList] = useState();

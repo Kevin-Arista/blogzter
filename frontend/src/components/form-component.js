@@ -12,7 +12,7 @@ function BlogForm(props){
 
     const handleSubmit = (e)=>{
         e.preventDefault()
-        axios.post("http://localhost:4000/blogs/post", formData).then((res) => {
+        axios.post("https://blogzter.onrender.com/blogs/post", formData).then((res) => {
             console.log(res.status, res.data);
         });
         setFormData({
